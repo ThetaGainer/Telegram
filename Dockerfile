@@ -26,7 +26,7 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 
 ### Telegram
 RUN mkdir -p /root/echo-bot/
-WORKDIR cd echo-bot/
+WORKDIR /root/echo-bot/
    
 RUN wget https://raw.githubusercontent.com/ThetaGainer/Telegram/main/bot.py
 RUN pip install --user pipenv 
