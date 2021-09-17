@@ -27,10 +27,10 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 ### Telegram
 RUN mkdir -p /root/echo-bot/
 WORKDIR cd echo-bot/
-RUN \
-    pip install --user pipenv \
-    python3 -m pipenv install python-telegram-bot \
-    wget https://raw.githubusercontent.com/ThetaGainer/Telegram/main/bot.py
+   
+RUN wget https://raw.githubusercontent.com/ThetaGainer/Telegram/main/bot.py
+RUN pip install --user pipenv 
+RUN python3 -m pipenv install python-telegram-bot
 
 # Telegram Run Server
 # python3 -m pipenv run python bot.py
